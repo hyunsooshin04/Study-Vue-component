@@ -29,7 +29,7 @@ export default {
   methods: {
     addevent(input) {
       this.input = input;
-      console.log("emit : " + this.input)
+      // console.log("emit : " + this.input)
     },
     clearAll(value) {
       this.clear = value;

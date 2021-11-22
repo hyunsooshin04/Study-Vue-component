@@ -16,13 +16,17 @@ export default {
   },
   methods: {
     addTodo: function () {
-      if (this.newTodoItem !== '') {
-        var obj = {completed: false, item: this.newTodoItem};
+      if (this.newTodoItem.trim() !== '') {
+        let obj = {completed: false, item: this.newTodoItem};
         //(텍스트,텍스트) 가 아닌 (텍스트, 불린) 을 저장
         localStorage.setItem(this.newTodoItem, JSON.stringify(obj));
-        console.log("addtodo : " + this.newTodoItem);
+        // console.log("addtodo : " + this.newTodoItem);
         this.$emit("addevent", this.newTodoItem);
         this.clearInput();
+      }
+      else {
+        alert("하는 일이 없으면 기록할수 없습니다.")
+        this.input = "";
       }
     },
     clearInput: function () {

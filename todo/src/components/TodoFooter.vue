@@ -1,7 +1,6 @@
 <template>
   <div class="clearAllContainer">
-      <span class="clearAllBtn" v-on:click="clearTodo">Clear All
-      </span>
+      <span class="clearAllBtn" v-on:click="clearTodo">Clear All</span>
   </div>
 </template>
 
@@ -13,11 +12,14 @@ export default {
     }
   },
   methods: {
+    check() {
+
+    },
     clearTodo: function () {
-      console.log("로컬 초기화")
+      // console.log("로컬 초기화")
       this.clear++;
       this.$emit('clearAll', this.clear)
-      console.log("emit clear")
+      // console.log("emit clear")
       localStorage.clear();
     }
   }

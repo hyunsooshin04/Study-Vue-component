@@ -2,7 +2,6 @@
   <div>
     <ul>
       <li v-for="(todoItem, index) in todoItems" v-bind:key="todoItem" class="shadow">
-        <input type="checkbox" class="ckb" value="true">
         {{ todoItem }}
         <span class="removeBtn" v-on:click="removeTodo(todoItem, index)">
           <i class="fas fa-trash-alt"></i>
@@ -40,7 +39,9 @@ export default {
       this.todoItems = [];
     },
     input() {
-      console.log(this.input)
+      // let i = 0;
+      // console.log("jh : " + document.getElementById('0').value)
+      // console.log(this.input)
       this.todoItems = [];
       if (localStorage.length > 0) {
         for (let i = 0; i < localStorage.length; i++) {
