@@ -28,9 +28,7 @@ export default {
       } else if (this.pwd == "") {
         alert("SignUp : 비밀번호를 입력해주세요.")
       } else {
-        console.log(this.IdOverlap)
         for (let i = 0; i < this.array.length; i++) {
-          console.log(this.array.length)
           if (this.id == this.array[i].id) {
             this.IdOverlap = false;
             console.log("중복 있음")
