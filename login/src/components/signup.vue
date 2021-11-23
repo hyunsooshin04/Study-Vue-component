@@ -5,10 +5,14 @@
     <!--    <button>중복확인</button><br>-->
     pw : <input type="password" v-model="pwd"><br>
     <button v-on:click="signup">signup</button>
+    {{ userdata }}
   </div>
 </template>
 
 <script>
+import UserJson from "../user.json"
+const userdata = UserJson;
+
 export default {
   name: "signup",
   data() {
@@ -17,10 +21,9 @@ export default {
       IdOverlap: true,
       array: [],
       pwd: "",
+      userdata
     }
   },
-  props: ['user']
-  ,
   methods: {
     signup() {
       if (this.id == "") {
@@ -37,7 +40,12 @@ export default {
         if (this.IdOverlap == true) {
           this.IdOverlap = true;
           this.array.push({id: this.id, pwd: this.pwd})
+          alert("회원가입 성공");
+          this.id = "";
+          this.pwd = "";
           // this.$emit("signup", this.array)
+        } else {
+          alert("아이디가 중복입니다.");
         }
       }
     }

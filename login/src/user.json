@@ -1,0 +1,18 @@
+[
+  {
+    "id": "admin",
+    "pwd": "admin"
+  },
+  {
+    "id": "test",
+    "pwd": "test"
+  },
+  {
+    "id": "json",
+    "pwd": "json"
+  },
+  {
+    "id": "wa",
+    "pwd": "wa"
+  }
+]
