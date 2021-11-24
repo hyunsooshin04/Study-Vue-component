@@ -7,8 +7,8 @@
     <br>
     <router-link to="/">Main</router-link>
     <router-view></router-view>
-    <h1>user.json data</h1><br>
-    <h1> Hello {{ key == -1 ? "" : userdata[key].name }} </h1> <br>
+<!--    <h1>user.json data</h1><br>-->
+<!--    <h1> Hello {{ key == -1 ? "" : userdata[key].name }} </h1> <br>-->
   </div>
 </template>
 
