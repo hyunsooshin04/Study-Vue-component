@@ -1,22 +1,18 @@
 [
   {
     "id": "admin",
-    "pwd": "admin",
-    "name": "admin"
+    "pwd": "admin"
   },
   {
     "id": "test",
-    "pwd": "test",
-    "name": "test"
+    "pwd": "test"
   },
   {
     "id": "json",
-    "pwd": "json",
-    "name": "json"
+    "pwd": "json"
   },
   {
     "id": "wa",
-    "pwd": "wa",
-    "name": "wd"
+    "pwd": "wa"
   }
 ]

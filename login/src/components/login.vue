@@ -4,13 +4,12 @@
     Id : <input type="text" v-model="id"><br>
     pw : <input type="password" v-model="pwd"><br>
     <button v-on:click="login">Login</button>
-    <button v-on:click="check">Check</button>
+    {{ array }}
   </div>
 </template>
 
 <script>
 import UserJson from "../user.json"
-
 const userdata = UserJson;
 
 export default {
@@ -21,9 +20,7 @@ export default {
       id: "",
       pwd: "",
       trueId: false,
-      userdata,
-      name: "test",
-      msg: "test"
+      userdata
     }
   },
   // props: ['user'],
@@ -49,7 +46,6 @@ export default {
           if (this.id == this.array[i].id) {
             if (this.pwd == this.array[i].pwd) {
               this.trueId = true;
-              localStorage.setItem("login", i);
             }
           }
         }
@@ -57,7 +53,6 @@ export default {
         this.id = this.trueId ? "" : this.id;
         this.pwd = this.trueId ? "" : this.pwd;
         this.trueId = false;
-        this.array.push({id: "login", pwd: "login", name: "login"})
       }
     }
   },
